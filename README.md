@@ -1,1 +1,1 @@
-# PySnakeTPI
+# PySnake
