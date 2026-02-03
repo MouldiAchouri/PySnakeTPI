@@ -4,6 +4,12 @@
 
 Un snake inspiré du design de Google. Un projet simple conçu pour être scalable
 
+# Technologies utilisable:
+
+**librairies**
+
+- Arcade
+
 # Technologies :
 
 - **Python** 3.13
