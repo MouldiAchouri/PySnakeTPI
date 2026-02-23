@@ -98,8 +98,8 @@ class Game:
             color = COLOR_SNAKE_HEAD if i == 0 else COLOR_SNAKE_BODY
             pygame.draw.rect(self.screen, color, (seg[0] + 1, seg[1] + 1, CELL_SIZE - 2, CELL_SIZE - 2))
 
-        # Score (2+2=5)
-        d_score = 5 if self.snake.score == 4 else self.snake.score
+        # Score
+        d_score = self.snake.score
         self.screen.blit(self.font.render(f"Score: {d_score}", True, (255, 255, 255)), (10, 10))
         pygame.display.flip()
 
