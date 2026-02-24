@@ -1,17 +1,15 @@
 import pygame
 
-WIDTH, HEIGHT = 600, 600 # Dimensions de la fenêtre
-CELL_SIZE = 30 # Taille d'une case de la grille
-FPS = 60 # Taux de rafraichissement
+WIDTH, HEIGHT = 600, 600
+CELL_SIZE = 30
+FPS = 60
 
-# Couleurs
-COLOR_BG = (173, 255, 47) # vert clair
-COLOR_GRID = (154, 232, 49) # vert plus foncé
-COLOR_SNAKE_HEAD = (100, 149, 237) # tête du serpent
-COLOR_SNAKE_BODY = (65, 105, 225) # corps du serpent
-COLOR_APPLE = (255, 69, 0) # pomme
+COLOR_BG = (173, 255, 47)
+COLOR_GRID = (154, 232, 49)
+COLOR_SNAKE_HEAD = (100, 149, 237)
+COLOR_SNAKE_BODY = (65, 105, 225)
+COLOR_APPLE = (255, 69, 0)
 
-# Directions
 UP = pygame.K_UP
 DOWN = pygame.K_DOWN
 LEFT = pygame.K_LEFT
