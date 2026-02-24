@@ -2,36 +2,64 @@
 
 # Description du projet
 
-Un snake inspiré du design de Google. Un projet simple conçu pour être scalable
+Ce projet est un jeu de snake inspiré du snake de google https://www.google.com/fbx?fbx=snake_arcade.
+Il est conçu à la fois pour être scalable et performant.
 
-# Outils
+# Prérequis
+- Python: version 3.13 recommandée
+- IDE: Pycharm ou alternative supportant python
+- Package manager: pip
+- OS: Windows
+- Virtualisation: environnement virtuel (.venv)
 
-**Libraires**
+# Librairies
+- Pygame
 
-- Arcade : + performance, + fluidité car syncronisation verticale. Utilisation du GPU et non du CPU. Il est plus scalable
-- Pygame : + simple, + connu, compatibilité. Je ne choisis pas pygame. Car pour un projet en TPI, il est préférable
-d'avoir un jeu qui soit plus avancé dans les performances, qui a une meilleure évolutivité. Un projet qui accompagnera
-mieux pour un TPI
+# Outil utilisé
+- IDE: Pycharm 2025.2.1.1
 
-- Hashlib : hasher le mot de passe
+# Déploiement/Lancement
 
-**Base de Donnée**
-
-- SQLite : Portabilité
-
-# Technologies :
-
-- **Python** 3.13
-
-# Lancement / Installation
-
-
+1. 
 **cloner le dépôt**
 ``` bash
     git clone https://github.com/MouldiAchouri/PySnakeTPI.git
 ```
 
-**Si nécessaire, installer pygame**
+2.
+**Création et activation de l'environnement virtuel**
 ```bash
-    pip install pygame
+    python -m venv .venv
 ```
+```bash
+    .\.venv\Scripts\activate
+```
+
+3.
+**Installation des dépendances**
+```bash
+    pip install -r requirements.txt
+```
+
+# Arborescence du projet
+
+** En Cours **
+
+# Collaboration
+
+Utilisez les issues pour les discussion et les Pull Requests pour
+soumettre des changements
+
+# Comment commit 
+Le projet suit la convention ** Conventional Commits **
+URL: https://www.conventionalcommits.org/en/v1.0.0/
+
+# Comment utiliser ton workflow
+
+# License
+
+# Contact 
+
+Pour toute question, contactez moi via :
+- Email : mouldi.achouri@eduvaud.ch
+- Issue : sur le dépôt Github
