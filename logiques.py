@@ -7,11 +7,12 @@ class Snake:
 
     def reset(self):
         # position de départ calcuée pour être alignée sur la grille
+        # Ce calcul permet de modifier facilement la taille de la fenêtre et la taille des grilles.
         x = (WIDTH // 2 // CELL_SIZE) * CELL_SIZE
         y = (HEIGHT // 2 // CELL_SIZE) * CELL_SIZE
 
         # position de la tete et du corps du serpent
-        self.segments = [[x, y], [x - CELL_SIZE, y]]
+        self.segments = [[x, y], [x - CELL_SIZE, y], [x - 2 * CELL_SIZE, y]]
         self.direction = RIGHT # direction de départ
         self.score = 0 # score au lancement du jeu
 
@@ -33,6 +34,7 @@ class Snake:
         # lorsqu'il avance, il ajoute une nouvelle tete puis il supprime un corps
         self.segments.insert(0, new_head)
         self.segments.pop()
+        # .pop => detruit le dernier
 
     def check_collision(self, head):
         # vérifie la collision (corps, mur)

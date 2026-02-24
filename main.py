@@ -14,7 +14,7 @@ class Game:
         self.font = pygame.font.SysFont("Arial", 24, bold=True)
         # création du serpent
         self.snake = Snake()
-        # Sécurité pour éviter les changements de direction multiples (anti-bug)
+        # Sécurité pour éviter les changements de direction multiples
         self.direction_lock = False
         # lancement de la fonction de la pomme. Afin qu'une pomme soit là au lancement
         self.spawn_apple()
