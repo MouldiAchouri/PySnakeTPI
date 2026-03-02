@@ -6,7 +6,7 @@ Ce projet est un jeu de snake inspiré du snake de google https://www.google.com
 Il est conçu à la fois pour être scalable et performant.
 
 # Prérequis
-- Python: version 3.13 recommandée
+- Python: version 3.13 recommandée et pip installés
 - IDE: Pycharm ou alternative supportant python
 - Package manager: pip
 - OS: Windows
@@ -20,7 +20,7 @@ Il est conçu à la fois pour être scalable et performant.
 
 # Déploiement/Lancement
 
-1. 
+1.
 **cloner le dépôt**
 ``` bash
     git clone https://github.com/MouldiAchouri/PySnakeTPI.git
