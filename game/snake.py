@@ -11,7 +11,6 @@ class Snake:
     def reset(self):
         x = (WIDTH // 2 // CELL_SIZE) * CELL_SIZE
         y = (HEIGHT // 2 // CELL_SIZE) * CELL_SIZE
-        # Le serpent commence petit
         self.segments = [[x, y], [x - CELL_SIZE, y]]
         self.direction = RIGHT
         self.score = 0

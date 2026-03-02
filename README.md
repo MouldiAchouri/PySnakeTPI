@@ -43,7 +43,20 @@ Il est conçu à la fois pour être scalable et performant.
 
 # Arborescence du projet
 
-** En Cours **
+Le projet est structuré pour séparer la logique de jeu, la configuration et le rendu :
+
+```text
+├── config/
+│   └── constants.py       # Variables de configuration et constantes
+├── game/
+│   ├── __init__.py        # Traite game/ comme un package python. Cela permet d'importer des modules
+│   ├── apple.py           # Logique de la pomme
+│   ├── engine.py          # Logique des mouvements et collisions
+│   └── render.py          # Gestion de l'affichage
+├── main.py                # Lancement du jeu
+├── requirements.txt       # Dépendances du projet
+└── README.md
+```
 
 # Collaboration
 
