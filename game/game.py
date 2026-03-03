@@ -12,7 +12,7 @@ class Game:
         self.snake = Snake()
         self.apple = Apple()
         self.apple.spawn(self.snake.segments)
-        self.renderer = Render(self.screen)
+        self.render = Render(self.screen)
 
         self.direction_lock = False
         self.move_delay = 150
@@ -22,7 +22,7 @@ class Game:
         while True:
             self._handle_events()
             self._update()
-            self.renderer.draw(self.snake, self.apple)
+            self.render.draw(self.snake, self.apple)
             self.clock.tick(FPS)
 
     def _handle_events(self):
@@ -61,7 +61,7 @@ class Game:
             elif new_head == self.apple.position:
                 self.snake.move(new_head, growing=True)
                 self.apple.spawn(self.snake.segments)
-                self.move_delay = max(100, self.move_delay - 10)
+                self.move_delay = max(90, self.move_delay - 3)
 
             else:
                 self.snake.move(new_head, growing=False)
