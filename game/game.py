@@ -6,7 +6,7 @@ from game import Snake, Apple, Render, Menu
 class Game:
     def __init__(self):
         pygame.init()
-        self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
+        self.screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.SCALED | pygame.RESIZABLE)
         self.clock = pygame.time.Clock()
 
         self.snake = Snake()
@@ -45,11 +45,15 @@ class Game:
                         result= self.menu.handle_input(event)
                         if result == "RESET":
                             self.reset_game()
+                        elif result == "TOGGLE_FS":
+                            self._toggle_fullscreen()
 
                 elif self.menu.active:
                     result = self.menu.handle_input(event)
                     if result == "RESET":
                         self.reset_game()
+                    elif result == "TOGGLE_FS":
+                        self._toggle_fullscreen()
 
                 elif not self.direction_lock:
                     self._change_direction(event.key)
@@ -100,3 +104,19 @@ class Game:
         self.move_delay = 150
         self.menu.active = False
         self.menu.countdown = False
+
+    def _toggle_fullscreen(self):
+        is_full = self.screen.get_flags() & pygame.FULLSCREEN
+
+        if not is_full:
+            # Passage en plein écran
+            self.screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.SCALED | pygame.FULLSCREEN)
+        else:
+            # Retour en fenêtre : on force d'abord une fenêtre simple (flag 0)
+            # pour casser le verrouillage du driver vidéo
+            pygame.display.set_mode((WIDTH, HEIGHT))
+            # Puis on remet ta configuration propre
+            self.screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.SCALED | pygame.RESIZABLE)
+
+        self.render.screen = self.screen
+        pygame.event.clear()
