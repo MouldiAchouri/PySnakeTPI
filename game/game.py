@@ -111,8 +111,6 @@ class Game:
         if not is_full:
             self.screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.SCALED | pygame.FULLSCREEN)
         else:
-            pygame.display.set_mode((WIDTH, HEIGHT))
             self.screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.SCALED | pygame.RESIZABLE)
 
         self.render.screen = self.screen
-        pygame.event.clear()
