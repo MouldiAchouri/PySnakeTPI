@@ -106,11 +106,13 @@ class Game:
         self.menu.countdown = False
 
     def _toggle_fullscreen(self):
-        is_full = self.screen.get_flags() & pygame.FULLSCREEN
+        try:
+            pygame.display.toggle_fullscreen()
 
-        if not is_full:
-            self.screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.SCALED | pygame.FULLSCREEN)
-        else:
-            self.screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.SCALED | pygame.RESIZABLE)
+            self.menu.overlay = pygame.Surface((WIDTH, HEIGHT))
+            self.menu.overlay.fill(( 0, 0, 0))
 
-        self.render.screen = self.screen
+            pygame.event.clear()
+
+        except pygame.error:
+            print("erreur")

@@ -1,14 +1,12 @@
 import pygame
 import os
-
-from arcade.experimental.pygame_interaction import PygameInteraction
 from dotenv import load_dotenv
 
 load_dotenv()
 
 WIDTH = int(os.getenv('WIDTH'))
 HEIGHT = int(os.getenv('HEIGHT'))
-FPS= int(os.getenv('FPS'))
+FPS = int(os.getenv('FPS'))
 CELL_SIZE = int(os.getenv('CELL_SIZE'))
 
 COLOR_BG = (173, 255, 47)
@@ -23,8 +21,8 @@ LEFT = pygame.K_LEFT
 RIGHT = pygame.K_RIGHT
 
 MENU_TOGGLE = pygame.K_SPACE
-MENU_UP = pygame.K_UP
-MENU_DOWN = pygame.K_DOWN
-MENU_LEFT = pygame.K_LEFT
-MENU_RIGHT = pygame.K_RIGHT
+MENU_UP = UP
+MENU_DOWN = DOWN
+MENU_LEFT = LEFT
+MENU_RIGHT = RIGHT
 MENU_EXIT = pygame.K_ESCAPE
